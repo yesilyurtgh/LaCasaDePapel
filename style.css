@@ -1,0 +1,1040 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    --main-black: #000000;
+    --main-red: #bb2e2a;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #bb2e2a;
+    border-radius: 50px;
+
+}
+
+::-webkit-scrollbar-track {
+    background: transparent
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    
+}
+
+section {
+    height: 100vh;
+}
+
+/*Header start*/
+header {
+    height: 8vh;
+    margin: 10px 100px;
+    background-color: var(--main-black);
+    border-radius: 20px;
+    box-shadow: 0 0 10px var(--main-red);
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header figure {
+
+    width: 30vh;
+    flex-shrink: 0;
+}
+
+header figure img {
+    width: 100%;
+}
+
+header nav {
+    display: flex;
+    flex-shrink: 10;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+header nav a {
+    border-bottom: 1px solid var(--main-black);
+    flex-shrink: 10;
+}
+
+header nav a:hover {
+    border-bottom: 1px solid var(--main-red);
+    transform: scaleY(1.2);
+    transition: .3s;
+}
+
+header .icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+header .icons .menu {
+    display: none;
+}
+
+/*Henuz js öğrenmedim. tıklayınca menulerin gelmesi için checkbox kullandım  */
+header .icons input {
+    display: none;
+}
+
+.search-conteiner {
+    width: 20vw;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    position: absolute;
+    right: 70px;
+    top: calc(8vh - 15px);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    visibility: hidden;
+
+}
+
+.search-conteiner i {
+    color: var(--main-black);
+    margin-right: 10px;
+    align-items: center;
+}
+
+header .icons label input:checked+.search-conteiner {
+    visibility: visible;
+    top: calc(8vh + 5px);
+    transition: .3s;
+}
+
+.play-container {
+    width: 20vw;
+    height: 180px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    position: absolute;
+    right: 50px;
+    top: calc(8vh - 15px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    visibility: hidden;
+}
+
+.play-container .seasons {
+    width: 100%;
+    height: 30px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-container .seasons:hover {
+    box-shadow: 0 0 10px black;
+}
+
+.play-container .seasons h3,
+.play-container .seasons i {
+    color: #000000;
+
+}
+
+header .icons .play input:checked+.play-container {
+    visibility: visible;
+    top: calc(8vh + 5px);
+    transition: .3s;
+}
+
+.menu-container {
+    width: 80vw;
+    height: 40px;
+    background-color: #bb2e2a;
+    opacity: 0.6;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: calc(8vh - 15px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    visibility: hidden;
+}
+
+.menu-container a {
+    border-bottom: 1px solid var(--main-red);
+    color: #000000;
+}
+
+.menu-container a:hover {
+    border-bottom: 1px solid var(--main-black);
+    transform: scaleY(1.1);
+    transition: all 0.3s ease;
+}
+
+header .icons .menu input:checked+.menu-container {
+    visibility: visible;
+    top: calc(8vh);
+    transition: .3s;
+}
+
+/*Header section end*/
+
+
+/*Hero section start*/
+.hero {
+    height: 100vh;
+    margin-top: calc(-8vh - 20px);
+    /* header: 8vh , header-margin-top,bottom:10 px */
+    background-image: url(images/hero-bc.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero .hero-content {
+
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+
+
+}
+
+.hero .img-logo {
+    width: 100%;
+    text-align: start;
+    margin-left: 150px;
+}
+
+.hero .img-logo img {
+    width: 100%;
+}
+
+.hero .img-bank {
+    width: 50vh;
+    text-align: start;
+    margin-left: 150px;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: -1;
+    transition: all 1.5s ease;
+
+}
+
+.hero .img-bank img {
+    width: 100%;
+}
+
+.hero .img-logo:hover+.img-bank {
+    top: -150px;
+    z-index: 0;
+    transition: all 1.5s ease;
+
+}
+
+.hero-content p {
+    margin: 20px auto 20px 70px;
+}
+
+.hero-content p span {
+    font-size: larger;
+    font-weight: 700;
+}
+
+/*Hero end*/
+/*About start*/
+.about {
+    background-color: var(--main-black);
+    padding: 60px 30px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.about-left {
+    width: 60%;
+}
+
+.about h3 {
+    font-size: 50px;
+    border-bottom: 3px solid var(--main-red);
+    display: inline-block;
+
+}
+
+.about h4 {
+    margin: 20px 0;
+    font-size: 20px;
+}
+
+.about p {
+    margin: 20px 0;
+}
+
+.about-left iframe {
+    width: 100%;
+}
+
+
+.about-right {
+    width: 30vw;
+    height: 80vh;
+    border: 1px solid var(--main-red);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--main-red);
+    margin: 40px 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+
+}
+
+.about-right p {
+    /*margin-top: 110px;*/
+    height: 100%;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/*About end*/
+/*Chracters start*/
+.characters {
+    background-image: url(images/charcters.avif);
+    background-position: center;
+    background-size: cover;
+}
+
+.characters h3 {
+    font-size: 50px;
+    border-bottom: 3px solid var(--main-red);
+    display: inline-block;
+    position: absolute;
+    margin-top: 9vh;
+    margin-left: 10px;
+    z-index: 3;
+}
+
+.characters figure {
+    width: 23vh;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8vh;
+
+}
+
+.characters figure img {
+    width: 100%;
+
+
+}
+
+.characters .top {
+    display: flex;
+    justify-content: center;
+    margin-right: 40vh;
+
+
+}
+
+.characters .top figure:last-child {
+    z-index: -1;
+    margin-left: -120px;
+    transition: all 1s ease-in-out;
+}
+
+.characters .top figure:first-child {
+    z-index: 1;
+}
+
+.characters .top figure:first-child:hover+figure {
+    z-index: 0;
+    margin-left: 10px;
+    transition: margin-left 1s ease-in-out;
+}
+
+.characters .top h2 {
+    z-index: 2;
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+.characters .top h2 span {
+    display: block;
+    font-size: 10px;
+}
+
+
+
+
+
+.characters .bottom {
+    width: 100%;
+    display: flex;
+    gap: 2vh;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.characters .bottom h2 {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+
+.characters .bottom figure:hover img {
+    transform: scale(1.2);
+
+}
+
+.characters .bottom figure:hover h2 {
+    transform: scale(1.1) rotate(-20deg);
+    transition: all 0.3s ease-in-out;
+
+}
+
+.characters .bottom figure:nth-of-type(odd) {
+    align-self: flex-start;
+    margin: 0;
+}
+
+.characters button {
+    position: absolute;
+    margin-top: -55vh;
+    margin-left: 4vw;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #bb2e2a;
+    color: white;
+    box-shadow: 0 0 10px var(--main-black);
+    cursor: pointer;
+}
+
+.characters button:hover {
+    background-color: #000000;
+    color: #bb2e2a;
+    font-weight: bold;
+    box-shadow: 0 0 10px var(--main-red);
+}
+
+/*Chracters end*/
+/*cast start*/
+
+.cast {
+    background-image: url(images/cast-bc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.cast h3 {
+    font-size: 50px;
+    border-bottom: 3px solid var(--main-red);
+    display: inline-block;
+    position: absolute;
+    margin-top: 9vh;
+    margin-left: 10px;
+    color: var(--main-red);
+    text-shadow: 0 0 10px var(--main-black);
+}
+
+.cast .card-container {
+
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+
+
+    column-gap: 15px;
+
+}
+
+.cast .cards {
+    background-color: white;
+    border-radius: 10px;
+    width: 15vw;
+    height: 38vh;
+    margin-top: 10vh;
+    object-fit: cover;
+}
+
+.cast .cards figure {
+    width: 100%;
+    height: 70%;
+    margin: 0 auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+
+}
+
+.cast .cards figure img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.cast .cards figure:hover img {
+    transform: scale(1.1);
+}
+
+.cast .professor {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.cast .professor figure {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.cast .professor .card-bottom .name h4,
+.cast .professor .card-bottom .name h5,
+.cast .professor .card-bottom .like i,
+.cast .professor .card-bottom .like .skor {
+    color: white;
+    z-index: 5;
+
+
+}
+
+
+.cards .card-bottom .name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+
+
+}
+
+.cards .card-bottom .name h4 {
+    color: var(--main-black);
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.cards .card-bottom .name h5 {
+    margin-top: 5px;
+    color: var(--main-black);
+}
+
+.cards .card-bottom .like {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    gap: 5px;
+
+
+}
+
+.cards .card-bottom .like i {
+    color: var(--main-black);
+}
+
+.cards .card-bottom .like .skor {
+    font-size: 12px;
+    align-self: end;
+    color: var(--main-red);
+    padding: 5px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.cards .card-bottom .like i:hover {
+    color: #bb2e2a;
+}
+
+.cards .card-bottom .like i:hover+.skor {
+    border: 1px solid var(--main-red);
+    transform: scale(1.2);
+    padding: 3px;
+    font-weight: bold;
+}
+
+/*cast-end*/
+
+
+
+
+
+/*comments start*/
+.comments {
+    background-image: url(images/comments-bc.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+.comments h3 {
+    font-size: 50px;
+    border-bottom: 3px solid var(--main-red);
+    display: inline-block;
+    position: absolute;
+    top: 9vh;
+    left: 10px;
+    color: var(--main-red);
+    text-shadow: 0 0 10px var(--main-black);
+
+}
+
+.comments .subjects {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.comments .subjects h4 {
+    font-size: 35px;
+    margin: 15px 0;
+    color: var(--main-red);
+    border-bottom: 1px solid var(--main-red);
+}
+
+.comments .subjects .comment-card {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    width: 25vw;
+    height: 25vh;
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 0 10px var(--main-black);
+}
+
+.comments .subjects .comment-card img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: -25px;
+    z-index: 0;
+}
+
+.comments .subjects .comment-card h5 {
+    color: var(--main-black);
+    font-size: 18px;
+    margin: 20px 30px 5px;
+    position: relative;
+    z-index: 5;
+}
+
+.comments .subjects .comment-card p {
+    color: var(--main-black);
+    font-size: 10px;
+    margin: 5px 30px;
+    text-align: justify;
+}
+
+.comments .subjects .comment-card .stars {
+    width: 50%;
+    margin-left: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.comments .subjects .comment-card i {
+    color: gold;
+
+}
+
+.comments .subjects .behind-card1 {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    width: 25vw;
+    height: 25vh;
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    cursor: pointer;
+    z-index: 2;
+
+}
+
+.comments .subjects .behind-card2 {
+    border: 2px solid black;
+    background-color: white;
+    border-radius: 10px;
+    width: 25vw;
+    height: 25vh;
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.comments .subjects .behind-card1:hover,
+.comments .subjects .behind-card2:hover {
+    box-shadow: 0 0 10px var(--main-black);
+}
+
+footer {
+    width: 100vw;
+    height: 30vh;
+    background-color: var(--main-black);
+}
+
+footer .top {
+    display: flex;
+    justify-content: space-evenly;
+    height: 70%;
+    padding: 70px;
+}
+
+footer .top .follow {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+footer .top .follow .icons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+footer .top .subscribe {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+}
+
+footer .top .subscribe label {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 20px;
+}
+
+footer .top .subscribe label i {
+    color: #000000;
+    padding-left: 10px;
+}
+
+footer .top .subscribe label input {
+    border: none;
+    outline: none;
+    color: #000000;
+}
+
+footer .top .contact {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+footer .top .contact i{
+    cursor: pointer;
+}
+
+footer .bottom {
+    margin: 25px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+/*comments end*/
+
+@media (max-width:800px) {
+
+    /*Header start*/
+    header {
+        margin: 10px 10px;
+    }
+
+    header figure {
+        width: 25vh;
+        padding-bottom: 10px;
+    }
+
+    .search-conteiner {
+        width: 30vh;
+        right: 110px;
+    }
+
+    .play-container {
+        width: 30vh;
+        right: 90px;
+    }
+
+    /*Header end*/
+    /*Hero start*/
+    .hero {
+        background-position: right;
+    }
+
+    .hero .img-bank {
+        width: 40vh;
+        margin-left: 50px;
+        left: 80px;
+    }
+
+    /*Hero end*/
+    /*card start*/
+    .cards .card-bottom .name h4 {
+
+        font-size: 13px;
+
+    }
+
+    .cards .card-bottom .name h5 {
+        font-size: 11px;
+
+    }
+
+    /*card start*/
+
+
+
+}
+
+
+@media (max-width:600px) {
+
+    /*Header start*/
+    header nav {
+        display: none;
+    }
+
+    header .icons .menu {
+        display: block;
+    }
+
+    /*Header end*/
+    /*Hero start*/
+    .hero {
+        background-position: right;
+    }
+
+    .hero .hero-content {
+        top: 150px;
+        right: 30px;
+        width: 80vw;
+    }
+
+    .hero-content p {
+        width: 80vw;
+    }
+
+    .hero .img-logo:hover+.img-bank {
+        z-index: -1;
+        /*Hover özelliği kaldırıldı*/
+    }
+
+    /*Hero end*/
+    /*About start*/
+    .about {
+        padding: 60px 40px;
+    }
+
+    .about h3 {
+        font-size: 45px;
+    }
+
+    .about h4,
+    .about p {
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .about iframe {
+
+        width: 400px;
+        height: 250px;
+    }
+
+    .about-right {
+        display: none;
+    }
+
+    /*about end*/
+
+    /*charecters start*/
+
+    .characters .bottom figure:nth-of-type(n+4) {
+        display: none;
+    }
+
+    .characters button {
+        margin-left: 55vw;
+
+    }
+
+    .characters h3 {
+        opacity: 0.5;
+    }
+
+    /*charecters end*/
+    /*cast start*/
+    .cast {
+        background-position: left;
+        background-size: cover;
+    }
+
+    .cast h3 {
+        z-index: 10;
+
+    }
+
+    .cast .card-container {
+        margin-right: 15px;
+        padding-top: 10vh;
+        margin-left: unset;
+        justify-content: flex-end;
+        row-gap: 15px;
+
+
+    }
+
+    .cast .cards {
+        width: 17vw;
+        margin-top: 0;
+
+
+    }
+
+    .cards .card-bottom .name h4 {
+
+        font-size: 12px;
+
+    }
+
+    .cards .card-bottom .name h5 {
+        font-size: 10px;
+
+    }
+
+    /*cast end*/
+    /*comments start*/
+    .comments {
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+
+    }
+
+    .comments .subjects .comment-card,
+    .comments .subjects .behind-card1,
+    .comments .subjects .behind-card2 {
+        width: 80vw;
+        height: 15vh;
+    }
+
+    .comments .subjects .comment-card h5 {
+        margin: 0 40px;
+
+    }
+
+    .comments .subjects .comment-card p {
+        text-indent: 10px;
+
+    }
+
+    .comments .subjects .behind-card1 {
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .comments .subjects .behind-card2 {
+        right: -20px;
+        bottom: -20px;
+    }
+
+    .comments .subjects h4 {
+        margin: 0;
+        align-self: flex-end;
+    }
+
+    .comments .subjects {
+
+        justify-content: center;
+    }
+
+    .comments .subjects .comment-card .stars {
+        font-size: 13px;
+    }
+
+
+
+
+
+    /*comments end*/
+
+
+
+
+}
