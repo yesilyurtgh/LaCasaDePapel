@@ -11,5 +11,5 @@ Eğitimin 6. haftasında la casa de papel için basit bir web sayfası hazırlad
 <li>Projede ki açılıp kapanan pencereler js'yi henüz bilmediğim için checkbox yapısı ile yaptım.</li>
 </ul>
 <h3>Screen Gif</h3>
-<img src="images/screen.gif">
+<img width=80% src="images/screen.gif">
 
