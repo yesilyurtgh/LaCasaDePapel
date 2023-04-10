@@ -10,6 +10,7 @@ Eğitimin 6. haftasında la casa de papel için basit bir web sayfası hazırlad
 <li>Grid yapısını basit bir şekilde  kullanarak grid yapısını keşfetmeye başladım </li>
 <li>Projede ki açılıp kapanan pencereler js'yi henüz bilmediğim için checkbox yapısı ile yaptım.</li>
 <li>Basit hover efektleri kullanarak bazı animasyonlar oluşturdum</li>
+<li>Scrolbarı özelleştirmeyi öğrendim </li>
 </ul>
 <h3>Screen Gif</h3>
 <img width=80% src="images/screen.gif">
