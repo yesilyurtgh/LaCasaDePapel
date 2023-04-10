@@ -1,8 +1,8 @@
 # La Casa De Papel
 Eğitimin 6. haftasında la casa de papel için basit bir web sayfası hazırladım.
 <h3>Kullanılan Teknolojiler</h3>
-*Html <br>
-*css
+* Html 
+* Css
 
 <h3>Açıklamalar</h3>
 <ul>
